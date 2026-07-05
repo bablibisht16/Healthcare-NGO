@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jarurat Care Foundation</title>
+    <meta
+      name="description"
+      content="Jarurat Care Foundation is a concept prototype offering demo emergency aid, tele-support, volunteer services, and compassionate care for communities."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a href="#home" class="skip-link">Skip to main content</a>
+
+    <header class="navbar">
+      <a class="brand" href="#home">
+        <span class="brand-icon"><i class="fas fa-heartbeat"></i></span>
+        <span>Jarurat Care Foundation</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#support">Support</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+        <i class="fas fa-moon"></i>
+      </button>
+    </header>
+
+    <main id="home">
+      <section class="hero section">
+        <div class="hero-content reveal">
+          <p class="eyebrow">Empowering Lives • Inspiring Hope • Creating Change</p>
+          <h1>Jarurat Care Foundation</h1>
+          <p class="hero-text">
+            We provide emergency relief, patient outreach, community wellness, and volunteer-powered care to families facing medical challenges.
+          </p>
+          <div class="hero-actions">
+            <a href="#support" class="btn btn-primary">Request Support</a>
+            <a href="#volunteer" class="btn btn-secondary">Become a Volunteer</a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat-card stat-animate" data-target="12000">
+              <strong class="stat-value">0</strong>
+              <span>Patients Supported (Demo)</span>
+            </div>
+            <div class="stat-card stat-animate" data-target="300">
+              <strong class="stat-value">0</strong>
+              <span>Volunteers (Demo)</span>
+            </div>
+            <div class="stat-card stat-animate" data-target="150">
+              <strong class="stat-value">0</strong>
+              <span>Health Camps (Demo)</span>
+            </div>
+            <div class="stat-card stat-animate" data-target="95">
+              <strong class="stat-value">0</strong>
+              <span>Communities Reached (Demo)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal">
+          <div class="hero-card">
+            <div class="hero-card-head">
+              <span class="pill">24/7 Care Network</span>
+              <span class="pill soft">Trusted by communities</span>
+            </div>
+            <div class="hero-grid">
+              <div class="mini-card">
+                <i class="fas fa-stethoscope"></i>
+                <h3>Medical Outreach</h3>
+                <p>Mobile clinics and essential screenings.</p>
+              </div>
+              <div class="mini-card">
+                <i class="fas fa-pills"></i>
+                <h3>Medicine Access</h3>
+                <p>Pharmacy support and treatment guidance.</p>
+              </div>
+              <div class="mini-card">
+                <i class="fas fa-hand-holding-heart"></i>
+                <h3>Emotional Support</h3>
+                <p>Counseling and peer support services.</p>
+              </div>
+              <div class="mini-card">
+                <i class="fas fa-people-group"></i>
+                <h3>Volunteer Care</h3>
+                <p>Skilled and compassionate community helpers.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Inline healthcare SVG illustration -->
+          <div class="hero-illustration" aria-hidden="true">
+            <svg viewBox="0 0 600 420" xmlns="http://www.w3.org/2000/svg" role="img">
+              <defs>
+                <linearGradient id="g1" x1="0" x2="1">
+                  <stop offset="0%" stop-color="#bff3d1" />
+                  <stop offset="100%" stop-color="#8fe4a0" />
+                </linearGradient>
+              </defs>
+              <rect rx="20" width="100%" height="100%" fill="url(#g1)" opacity="0.18" />
+              <g transform="translate(40,30)">
+                <rect x="10" y="10" width="220" height="160" rx="12" fill="#fff" opacity="0.9" />
+                <circle cx="300" cy="80" r="64" fill="#fff" opacity="0.95" />
+                <path d="M40 120 C80 80, 140 80, 180 120" stroke="#16a34a" stroke-width="6" fill="none" stroke-linecap="round" />
+                <g transform="translate(20,22)" fill="#16a34a">
+                  <rect x="40" y="24" width="18" height="40" rx="6" />
+                  <rect x="72" y="16" width="18" height="56" rx="6" />
+                  <rect x="104" y="8" width="18" height="72" rx="6" />
+                </g>
+                <g transform="translate(260,36)">
+                  <path d="M36 6c-9 0-16 7-16 16v20h32V22c0-9-7-16-16-16z" fill="#10b981" opacity="0.95" />
+                  <path d="M8 52h56v12H8z" fill="#047857" opacity="0.25" />
+                </g>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      <!-- NEW: standalone impact/statistics section. Reuses the existing
+           .stat-animate count-up logic and .reveal scroll-in logic from
+           script.js, so no JS changes were required to power this. -->
+      <section class="impact-stats section" id="impact">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Our Impact</p>
+          <h2>Real change, measured in lives touched.</h2>
+        </div>
+        <div class="impact-grid">
+          <div class="impact-card reveal stat-animate" data-target="12000">
+            <div class="impact-icon"><i class="fas fa-user-injured"></i></div>
+            <strong class="stat-value">0</strong>
+            <span>Patients Supported (Demo)</span>
+          </div>
+          <div class="impact-card reveal stat-animate" data-target="300">
+            <div class="impact-icon"><i class="fas fa-people-group"></i></div>
+            <strong class="stat-value">0</strong>
+            <span>Volunteers (Demo)</span>
+          </div>
+          <div class="impact-card reveal stat-animate" data-target="150">
+            <div class="impact-icon"><i class="fas fa-house-medical"></i></div>
+            <strong class="stat-value">0</strong>
+            <span>Health Camps (Demo)</span>
+          </div>
+          <div class="impact-card reveal stat-animate" data-target="95">
+            <div class="impact-icon"><i class="fas fa-map-marked-alt"></i></div>
+            <strong class="stat-value">0</strong>
+            <span>Communities Reached (Demo)</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="about section" id="about">
+        <div class="section-heading reveal">
+          <p class="eyebrow">About Our NGO</p>
+          <h2>Building healthier futures with dignity and care.</h2>
+          <p>
+            We combine modern outreach methods with heartfelt service to make healthcare support accessible to underserved families.
+          </p>
+        </div>
+        <div class="about-grid">
+          <article class="glass-card reveal">
+            <i class="fas fa-bullseye"></i>
+            <h3>Our Mission</h3>
+            <p>To provide preventive, emergency, and ongoing support that strengthens community well-being.</p>
+          </article>
+          <article class="glass-card reveal">
+            <i class="fas fa-eye"></i>
+            <h3>Our Vision</h3>
+            <p>A world where everyone can access safe, compassionate, and timely care without fear.</p>
+          </article>
+          <article class="glass-card reveal">
+            <i class="fas fa-shield-heart"></i>
+            <h3>Our Promise</h3>
+            <p>Confidential guidance, practical help, and immediate support for every request we receive.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="services section" id="services">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Our Services</p>
+          <h2>Support designed for every stage of care.</h2>
+        </div>
+        <div class="services-grid">
+          <article class="service-card reveal">
+            <i class="fas fa-ambulance"></i>
+            <h3>Emergency Response</h3>
+            <p>Rapid referrals and coordination for urgent medical and shelter needs.</p>
+          </article>
+          <article class="service-card reveal">
+            <i class="fas fa-mobile-screen"></i>
+            <h3>Telehealth Support</h3>
+            <p>Remote consultations and wellness guidance for families in remote areas.</p>
+          </article>
+          <article class="service-card reveal">
+            <i class="fas fa-kit-medical"></i>
+            <h3>Medicine & Supplies</h3>
+            <p>Essential treatment kits, diagnostics, and health education resources.</p>
+          </article>
+          <article class="service-card reveal">
+            <i class="fas fa-user-friends"></i>
+            <h3>Community Outreach</h3>
+            <p>Workshops and awareness drives to promote prevention and healthy living.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="forms section" id="support">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Patient & Volunteer Support</p>
+          <h2>Choose the care pathway that fits your needs.</h2>
+        </div>
+        <div class="forms-grid">
+          <div class="form-card reveal">
+            <div class="form-header">
+              <h3><i class="fas fa-hospital-user"></i> Patient Support Request</h3>
+              <p>Tell us how we can assist with medical, transport, or recovery support.</p>
+              <p class="demo-note">Demo Registration Form</p>
+            </div>
+            <form id="patient-form" novalidate>
+              <div class="input-group">
+                <label for="patient-name">Full Name</label>
+                <input id="patient-name" name="patient-name" type="text" required />
+              </div>
+              <div class="input-group">
+                <label for="patient-email">Email Address</label>
+                <input id="patient-email" name="patient-email" type="email" required />
+              </div>
+              <div class="input-group">
+                <label for="patient-need">Support Needed</label>
+                <select id="patient-need" name="patient-need" required>
+                  <option value="">Select one</option>
+                  <option>Emergency medical support</option>
+                  <option>Medication assistance</option>
+                  <option>Transport support</option>
+                  <option>Recovery counseling</option>
+                </select>
+              </div>
+              <div class="input-group">
+                <label for="patient-message">Details</label>
+                <textarea id="patient-message" name="patient-message" rows="4" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Submit Request</button>
+            </form>
+            <div id="patient-summary" class="summary-box" aria-live="polite"></div>
+          </div>
+
+          <div class="form-card reveal" id="volunteer">
+            <div class="form-header">
+              <h3><i class="fas fa-hands-helping"></i> Volunteer Registration</h3>
+              <p>Join our care network by offering time, skill, or community outreach support.</p>
+              <p class="demo-note">Demo Registration Form</p>
+            </div>
+            <form id="volunteer-form" novalidate>
+              <div class="input-group">
+                <label for="volunteer-name">Full Name</label>
+                <input id="volunteer-name" name="volunteer-name" type="text" required />
+              </div>
+              <div class="input-group">
+                <label for="volunteer-email">Email Address</label>
+                <input id="volunteer-email" name="volunteer-email" type="email" required />
+              </div>
+              <div class="input-group">
+                <label for="volunteer-role">Area of Interest</label>
+                <select id="volunteer-role" name="volunteer-role" required>
+                  <option value="">Select one</option>
+                  <option>Patient support</option>
+                  <option>Fundraising</option>
+                  <option>Community outreach</option>
+                  <option>Administrative support</option>
+                </select>
+              </div>
+              <div class="input-group">
+                <label for="volunteer-availability">Availability</label>
+                <input id="volunteer-availability" name="volunteer-availability" type="text" required />
+              </div>
+              <div class="input-group">
+                <label for="volunteer-message">Why do you want to help?</label>
+                <textarea id="volunteer-message" name="volunteer-message" rows="4" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-secondary">Register Now</button>
+            </form>
+            <div id="volunteer-summary" class="summary-box" aria-live="polite"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="faq section" id="faq">
+        <div class="section-heading reveal">
+          <p class="eyebrow">AI FAQ Assistant</p>
+          <h2>Instant answers for common healthcare inquiries.</h2>
+        </div>
+        <div class="faq-wrapper">
+          <div class="faq-info reveal">
+            <h3>Ask anything from our rule-based assistant</h3>
+            <div class="faq-label">AI FAQ Demo</div>
+            <ul>
+              <li>How do I request emergency support?</li>
+              <li>Can I receive free medical guidance?</li>
+              <li>How can I volunteer?</li>
+              <li>Where are your outreach clinics?</li>
+            </ul>
+          </div>
+          <div class="faq-card reveal">
+            <div class="chat-window" id="chat-window">
+              <div class="message bot">Welcome to Jarurat Care Foundation. Hello! I can help with healthcare support, volunteering, and service availability. Ask me anything.</div>
+            </div>
+            <div class="quick-questions">
+              <button data-question="How can I request urgent support?">Urgent support</button>
+              <button data-question="Do you offer free medical guidance?">Free guidance</button>
+              <button data-question="How do I volunteer?">Volunteer</button>
+            </div>
+            <form id="faq-form" class="chat-form">
+              <input id="faq-input" type="text" placeholder="Type your question here" required />
+              <button type="submit" class="btn btn-primary">Ask</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="testimonials section">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Testimonials</p>
+          <h2>Stories of care, trust, and recovery.</h2>
+        </div>
+        <div class="testimonial-grid">
+          <article class="testimonial-card reveal">
+            <p>“This is a demo testimonial to show the layout and feel for the internship submission.”</p>
+            <h3>Maria S. (Demo)</h3>
+            <span>Patient family member (Demo)</span>
+          </article>
+          <article class="testimonial-card reveal">
+            <p>“Volunteering in this demo project demonstrates how volunteers can support outreach efforts.”</p>
+            <h3>Daniel R. (Demo)</h3>
+            <span>Volunteer (Demo)</span>
+          </article>
+          <article class="testimonial-card reveal">
+            <p>“Community outreach examples in this prototype show expected communication and results.”</p>
+            <h3>Amara L. (Demo)</h3>
+            <span>Community partner (Demo)</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="contact section" id="contact">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Contact Us</p>
+          <h2>We are here to help, listen, and guide you.</h2>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-card reveal">
+            <h3>Reach out</h3>
+            <ul class="contact-list">
+              <li><i class="fas fa-envelope"></i> hr@jarurat.care</li>
+              <li><i class="fas fa-phone"></i> +91 00000 00000 (Demo Number)</li>
+              <li><i class="fas fa-location-dot"></i> Aastha Vihar, Polysheet, Haldwani, Amritpur, Nainital, Uttarakhand – 263126</li>
+            </ul>
+          </div>
+          <div class="contact-card reveal">
+            <form id="contact-form">
+              <div class="input-group">
+                <label for="contact-name">Name</label>
+                <input id="contact-name" type="text" required />
+              </div>
+              <div class="input-group">
+                <label for="contact-email">Email</label>
+                <input id="contact-email" type="email" required />
+              </div>
+              <div class="input-group">
+                <label for="contact-message">Message</label>
+                <textarea id="contact-message" rows="4" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Send Message</button>
+              <p class="form-note">Demo form for assignment purposes only.</p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <button class="chat-toggle" id="chat-toggle" aria-label="Open health assistant" aria-expanded="false">
+      <i class="fas fa-comments"></i>
+    </button>
+
+    <!-- Chatbot popup: header now matches the CSS (avatar + status dot),
+         which it didn't before. -->
+    <div class="chat-popup" id="chat-popup" role="dialog" aria-modal="true" aria-label="Health Assistant chat" aria-live="polite">
+      <div class="chat-popup-header">
+        <div class="chat-header-info">
+          <span class="avatar"><i class="fas fa-robot"></i></span>
+          <div>
+            <h3 class="popup-title">Health Assistant</h3>
+            <p class="status-line"><span class="status-dot"></span>Online</p>
+          </div>
+        </div>
+        <button id="close-chat" aria-label="Close assistant"><i class="fas fa-xmark"></i></button>
+      </div>
+      <div class="chat-window popup-chat" id="popup-chat-window">
+        <div class="message bot">Welcome to Jarurat Care Foundation. Hi! I can answer common questions about services, volunteers, and support timelines.</div>
+      </div>
+      <div class="quick-questions popup-questions">
+        <button data-question="How can I request urgent support?">Urgent support</button>
+        <button data-question="Do you provide free consultations?">Free consultations</button>
+        <button data-question="How do I volunteer?">Volunteer</button>
+      </div>
+      <form id="popup-faq-form" class="chat-form">
+        <input id="popup-faq-input" type="text" placeholder="Ask about services" required />
+        <button type="submit" class="btn btn-primary">Send</button>
+      </form>
+    </div>
+
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Footer: now actually populated to match the grid/column CSS. -->
+    <footer class="footer">
+      <div class="footer-left">
+        <a class="brand" href="#home">
+          <span class="brand-icon"><i class="fas fa-heartbeat"></i></span>
+          <span>Jarurat Care Foundation</span>
+        </a>
+        <p class="footer-tagline">
+          Compassionate healthcare support for underserved communities — every patient, every volunteer, every day.
+        </p>
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div class="footer-right">
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <div class="quick-links">
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#support">Support</a>
+            <a href="#faq">FAQ</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul class="footer-contact">
+            <li><i class="fas fa-envelope"></i> hr@jarurat.care</li>
+            <li><i class="fas fa-phone"></i> +91 00000 00000 (Demo Number)</li>
+            <li><i class="fas fa-location-dot"></i> Aastha Vihar, Polysheet, Haldwani, Amritpur, Nainital, Uttarakhand – 263126</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span id="year"></span> Jarurat Care Foundation. Compassionate care for every community.</p>
+        <p class="prototype-note">This is a concept prototype created for the Jarurat Care Foundation Full Stack Developer Internship Assignment.</p>
+      </div>
+    </footer>
+
+    <!-- Loading overlay -->
+    <div id="loading-overlay" class="loading-overlay">
+      <div class="loader">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+      <div class="loader-label">Loading Jarurat Care Foundation</div>
+    </div>
+
+    <!-- Success modal for forms -->
+    <div id="success-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="success-title" aria-hidden="true">
+      <div class="modal-content">
+        <button id="close-success" class="modal-close" aria-label="Close">&times;</button>
+        <div class="modal-body">
+          <div class="modal-icon"><i class="fas fa-circle-check"></i></div>
+          <h3 id="success-title">Request submitted</h3>
+          <p id="success-message">Thank you — your request is being processed.</p>
+          <div class="request-id">Reference ID: <strong id="request-id">#000000</strong></div>
+          <div class="modal-actions">
+            <button id="modal-copy" class="btn btn-secondary">Copy ID</button>
+            <button id="modal-close-btn" class="btn btn-primary">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
