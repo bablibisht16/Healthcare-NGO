@@ -1207,10 +1207,10 @@ body.dark-mode .chat-form input {
 
   .nav-links {
     display: grid;
-    grid-template-rows: 0fr;
+    max-height: 0;
     width: 100%;
     overflow: hidden;
-    transition: grid-template-rows 0.3s var(--ease);
+    transition: max-height 0.28s var(--ease), padding-top 0.28s var(--ease);
   }
 
   .nav-links > * {
@@ -1218,16 +1218,8 @@ body.dark-mode .chat-form input {
   }
 
   .nav-links.active {
-    grid-template-rows: 1fr;
+    max-height: 1000px;
     padding-top: 8px;
-  }
-
-  .nav-links {
-    display: grid;
-  }
-
-  .nav-links.active {
-    display: grid;
   }
 
   .nav-links a {

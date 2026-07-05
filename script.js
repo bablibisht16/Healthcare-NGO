@@ -91,6 +91,16 @@ if (navToggle && navLinks) {
       navToggle.setAttribute('aria-expanded', 'false');
     });
   });
+
+  // NEW: clicking outside the open mobile nav closes it.
+  document.addEventListener('click', (event) => {
+    if (!navLinks.classList.contains('active')) return;
+    const clickedInsideNav = navLinks.contains(event.target) || navToggle.contains(event.target);
+    if (!clickedInsideNav) {
+      navLinks.classList.remove('active');
+      navToggle.setAttribute('aria-expanded', 'false');
+    }
+  });
 }
 
 if (themeToggle) {
